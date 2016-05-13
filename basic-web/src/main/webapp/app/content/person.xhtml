@@ -1,0 +1,45 @@
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"	
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h2>Persons</h2>
+	<p:dataTable id="persons1" var="person" value="#{personBean.personList}" editable="true" style="margin-bottom:20px">
+		<f:facet name="header">
+           Person Managment
+       </f:facet>
+       
+       <p:ajax event="rowEdit" listener="#{personBean.onRowEdit}" update=":form:msgs" />
+       <p:ajax event="rowEditCancel" listener="#{personBean.onRowCancel}" update=":form:msgs" />
+
+		<p:column headerText="Id">
+			<p:cellEditor>
+				<f:facet name="output"><h:outputText value="#{person.id}" /></f:facet>
+				<f:facet name="input"><p:inputText id="modelInput" value="#{person.id}" style="width:100%" /></f:facet>
+			</p:cellEditor>
+		</p:column>
+
+		<p:column headerText="First name">
+			<p:cellEditor>
+				<f:facet name="output"><h:outputText value="#{person.firstName}" /></f:facet>
+				<f:facet name="input"><p:inputText value="#{person.firstName}" style="width:100%" label="First name" /></f:facet>
+			</p:cellEditor>
+		</p:column>
+		
+		<p:column headerText="Last name">
+			<p:cellEditor>
+				<f:facet name="output"><h:outputText value="#{person.lastName}" /></f:facet>
+				<f:facet name="input"><p:inputText value="#{person.lastName}" style="width:100%" label="Last name" /></f:facet>
+			</p:cellEditor>
+		</p:column>
+		
+		<p:column style="width:32px">
+           <p:rowEditor />
+       </p:column>
+	</p:dataTable>
+	<h3>Agregar personas</h3>
+	<p>Bloa bla bla bla</p>
+
+</ui:composition>

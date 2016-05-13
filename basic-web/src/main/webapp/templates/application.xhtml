@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>basic-runcode</title>
+	<h:outputStylesheet library="runcode" name="css/default.css" />
+	<ui:insert name="bloque_estilos"></ui:insert>
+</h:head>
+
+<h:body>
+	<f:metadata>
+		<f:event type="preRenderView" listener="#{loginBean.redirectLoggedOutUsers}" />
+	</f:metadata>
+		
+	<div id="header">
+		<div class="header_content">
+			<h1 >RunCode</h1>
+		</div>      
+	</div>
+	<div id="full_content">
+		<h:form id="form">
+			<p:growl id="msgs" widgetVar="messagesVar" showDetail="true" life="5000" autoUpdate="true" />
+			<div class="navbar">
+		      <ui:insert name="navbar">
+			    	navbar
+			  </ui:insert>
+			</div>
+			<div class="content">
+		      <ui:insert name="content">
+			    	content
+			  </ui:insert>
+			</div>
+		</h:form>
+		<div class="text_line" />
+	</div>	
+	
+</h:body>
+</html>

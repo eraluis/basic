@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/templates/basic.xhtml">
+	<ui:define name="full_content">
+		<ui:fragment rendered="#{not identity.loggedIn}">
+			<h:form>
+				<div style="margin-top: 30px" />
+				<p:panel header="Sign up" id="signup"
+					style="width: 25%; margin-left: auto; margin-right: auto;">
+					<h:panelGrid columns="2" cellpadding="4" style="width: 100%;">
+						<h:outputLabel value="First Name" />
+						<h:inputText value="#{userBean.firstName}" required="true" />
+
+						<h:outputLabel value="Last Name" />
+						<h:inputText value="#{userBean.lastName}" required="true" />
+
+						<h:outputLabel value="Username" />
+						<h:inputText value="#{userBean.loginName}" required="true" />
+
+						<h:outputLabel value="Password" />
+						<h:inputSecret value="#{userBean.password}" required="true" />
+
+						<h:outputLabel value="" />					
+						<h:panelGroup>
+			            	<p:commandButton  value="Sign up" action="#{userBean.register}"/>
+			            	<h:outputLabel value=" "/>
+			            	<p:commandLink value="Sign in" action="signin" immediate="true"  />
+			            </h:panelGroup>
+					</h:panelGrid>
+				</p:panel>
+			</h:form>
+		</ui:fragment>		
+	</ui:define>
+</ui:composition>
+</html>

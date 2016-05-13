@@ -1,0 +1,28 @@
+<ui:composition 
+	template="/templates/application.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="navbar">
+		<h3>Menu:</h3>
+		<ul>
+			<li> <p:commandLink action="#{testBean.setHome}" value="Home" update="@form" /> </li>
+			<li> <p:commandLink action="#{testBean.setPerson}" value="Persons" update="@form" /> </li>
+			<li> <p:commandLink action="#{testBean.setMenu3}" value="Menu 3" update="@form" /> </li>			
+		</ul>
+	</ui:define>
+	
+	<ui:define name="content">
+		<h:panelGroup style="float: right;">
+			<p:commandLink value=" #{identity.account.firstName} #{identity.account.lastName}"/>
+			<h:outputText value=" | "/>
+			<p:commandLink action="#{identity.logout}" value="Sing out"/>
+		</h:panelGroup>	
+		<div class="clear" />			
+		<ui:include src="/app/content/#{testBean.selectedMenu}.xhtml" />
+	</ui:define>
+			
+</ui:composition>

@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportPruebas" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="740389a2-d5a5-40c6-b7c1-15aee1dc6f3e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="17"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#486666">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#CFE6E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#5A7F80">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#CFE5E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F8F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 12">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 13">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 14">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TH" mode="Opaque" backcolor="#8FAFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F3F6F8"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 15">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TH" mode="Opaque" backcolor="#BFBFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_CH" mode="Opaque" backcolor="#E6E6FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F8F8FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="pruebasPozoDataSet" uuid="28a917ea-8d09-4368-ba92-4e6b90a9300d">
+		<field name="fluidLevel_mm" class="java.lang.Integer"/>
+		<field name="fluidLevel_bbls" class="java.lang.Double"/>
+		<field name="tnk" class="java.lang.String"/>
+		<field name="ind" class="java.lang.String"/>
+		<field name="fechaMedida" class="java.lang.String"/>
+		<field name="waterFree_mm" class="java.lang.Integer"/>
+		<field name="waterFree_bbls" class="java.lang.Double"/>
+		<field name="tempShell_f" class="java.lang.Double"/>
+		<field name="CTSh" class="java.lang.Double"/>
+		<field name="gossOil_bbls" class="java.lang.Double"/>
+		<field name="apiObs" class="java.lang.Double"/>
+		<field name="tempObs_f" class="java.lang.Integer"/>
+		<field name="apiArb60" class="java.lang.Double"/>
+		<field name="tempTk_f" class="java.lang.Integer"/>
+		<field name="tempAmb_f" class="java.lang.Integer"/>
+		<field name="vcf" class="java.lang.Double"/>
+		<field name="stdVol_bbls" class="java.lang.Double"/>
+		<field name="sw_percentage" class="java.lang.Double"/>
+		<field name="factorBSW" class="java.lang.Double"/>
+		<field name="netOil_bbls" class="java.lang.Double"/>
+	</subDataset>
+	<parameter name="fr_fluidoTotal" class="java.lang.Double"/>
+	<parameter name="fr_aceiteNeto" class="java.lang.Double"/>
+	<parameter name="fr_aceiteEstandar" class="java.lang.Double"/>
+	<parameter name="fr_agua" class="java.lang.Double"/>
+	<parameter name="fr_tiempoPrueba" class="java.lang.Integer"/>
+	<parameter name="lp_fluidoTotal" class="java.lang.Double"/>
+	<parameter name="lp_aceiteNeto" class="java.lang.Double"/>
+	<parameter name="lp_agua" class="java.lang.Double"/>
+	<parameter name="lp_bsw" class="java.lang.Double"/>
+	<parameter name="lp_caudalGas" class="java.lang.Integer"/>
+	<parameter name="pos_presionEstatica" class="java.lang.Double"/>
+	<parameter name="pos_presionDiferencial" class="java.lang.Double"/>
+	<parameter name="pos_tempLineaGas" class="java.lang.Double"/>
+	<parameter name="pos_platinaOrificio" class="java.lang.Double"/>
+	<parameter name="pos_idLineaGas" class="java.lang.Double"/>
+	<parameter name="pos_gravEspecificaGas" class="java.lang.Double"/>
+	<parameter name="pos_gor" class="java.lang.Integer"/>
+	<parameter name="ppo_thp" class="java.lang.Integer"/>
+	<parameter name="ppo_chp" class="java.lang.Integer"/>
+	<parameter name="ppo_choke" class="java.lang.String"/>
+	<parameter name="ppo_frecuenciaVariador" class="java.lang.Double"/>
+	<parameter name="ppo_pip" class="java.lang.Double"/>
+	<parameter name="ppo_voltajeVariador" class="java.lang.Integer"/>
+	<parameter name="ppo_corrienteMotor" class="java.lang.Double"/>
+	<parameter name="mcp_apiArb60" class="java.lang.Double"/>
+	<parameter name="mcp_bsw" class="java.lang.Double"/>
+	<parameter name="mcp_sedimentos" class="java.lang.Double"/>
+	<parameter name="mcp_clorduros" class="java.lang.Double"/>
+	<parameter name="mco_ph" class="java.lang.Double"/>
+	<parameter name="medidasPruebaPozoDataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="estacion" class="java.lang.String"/>
+	<parameter name="pozo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="326" y="2" width="268" height="46" uuid="9084402a-ae02-4f2b-88f6-f6489a95dff4"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIQUIDACIÓN DE PRUEBA DE POZOS
+VETRA E&P COLOMBIA
+CAMPO SURORIENTE 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="619" y="6" width="58" height="20" uuid="53dd58ac-7a0a-4545-a0ff-9d79fa02a532"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTACIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="619" y="26" width="58" height="20" uuid="55370846-05b4-480f-9c47-4c3a449270f6"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[POZO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="677" y="6" width="100" height="20" uuid="2d44875c-28df-405a-b7e7-80a1af692828"/>
+				<textFieldExpression><![CDATA[$P{estacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="677" y="26" width="100" height="20" uuid="154900d7-1933-4c04-922e-e517a9b73de6"/>
+				<textFieldExpression><![CDATA[$P{pozo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="415" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="175" width="89" height="20" uuid="3705457e-373d-41d1-8343-ac732958aefd"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fluido total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="175" width="79" height="20" uuid="d9d14b11-6467-42ff-ae8d-b43999bedfa9"/>
+				<textFieldExpression><![CDATA[$P{fr_fluidoTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="176" y="175" width="43" height="20" uuid="675d7e19-12c1-4b26-8fc4-8b1e6dd63a97"/>
+				<text><![CDATA[bls]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="175" width="79" height="20" uuid="90240f6a-524a-4ae3-aebe-e75585f78a26"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fluido total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="175" width="43" height="20" uuid="790e0e1d-0958-465a-b66c-efad96d550b7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[BFPD]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="304" y="175" width="37" height="20" uuid="84af90c7-d5f9-4b02-ad1a-9c89c449109e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{lp_fluidoTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="176" y="235" width="43" height="20" uuid="0251f8a5-252b-4b76-b240-ba17d182b01d"/>
+				<text><![CDATA[bls]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="215" width="89" height="20" uuid="58b5a773-0f03-4e7e-b94a-7501ec34bb2e"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aceite estándar]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="235" width="79" height="20" uuid="c0939f92-9496-4966-96c6-2f2810047ad1"/>
+				<textFieldExpression><![CDATA[$P{fr_agua}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="235" width="89" height="20" uuid="627a74ce-1ea0-4d30-8142-ed662bb36aa9"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Agua]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="215" width="43" height="20" uuid="4cb27406-1500-4540-ada2-f4ea0f1f8e63"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[BWPD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="195" width="89" height="20" uuid="7ab57df2-fc4a-47e3-93ae-a187f8b48952"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aceite neto]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="215" width="79" height="20" uuid="ce9cdee3-22b2-4355-abdf-3010fe6e9b0f"/>
+				<textFieldExpression><![CDATA[$P{fr_aceiteEstandar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="225" y="235" width="79" height="20" uuid="82414017-7797-476a-b23f-a74cb5761bc9"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BSW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="195" width="79" height="20" uuid="8b73b550-85cd-41af-a27f-dba600097cd2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aceite neto]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="304" y="215" width="37" height="20" uuid="72805256-77a0-4f73-aa66-37173ba08d0e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{lp_agua}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="304" y="235" width="37" height="20" uuid="d038b3f8-4c42-4da2-980f-34baeb09cbd8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{lp_bsw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="195" width="79" height="20" uuid="a5d71374-3baa-489e-9bb9-c4d456083321"/>
+				<textFieldExpression><![CDATA[$P{fr_aceiteNeto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="341" y="195" width="43" height="20" uuid="ffeec7a5-ac8a-4ce6-af56-e465ab04b599"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[SBOPD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="235" width="43" height="20" uuid="54eda21b-f3b4-4fe3-9c58-47e806a8b6f6"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="195" width="43" height="20" uuid="34bbed5c-06f1-4281-ad0d-5d82bad6f45c"/>
+				<text><![CDATA[bls]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="304" y="195" width="37" height="20" uuid="ddae9fb8-f534-48bb-bf22-90de052896cc"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{lp_aceiteNeto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="225" y="215" width="79" height="20" uuid="515774d0-4e79-4c8c-8305-ff68d978215a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Agua]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="215" width="43" height="20" uuid="609636be-b94f-422f-8802-b6b405fe9927"/>
+				<text><![CDATA[bls]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="551" y="235" width="43" height="20" uuid="3aa73c9d-d468-400e-8a3d-17782dee71e1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[°F]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="175" width="194" height="20" uuid="853cccd3-a9cf-4c33-b2d0-d0379c8d5b11"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parámetros de Operación Separador]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="713" y="235" width="45" height="20" uuid="d3517816-9881-4df1-b2ec-4afd54e7193f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppo_choke}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="758" y="215" width="43" height="20" uuid="02727c85-f11e-45bd-aea2-8b8af9e23ff7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[psi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="215" width="118" height="20" uuid="11eb8c10-4dcb-4f6a-9b08-1f71d09c1afa"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Presión diferencial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="551" y="215" width="43" height="20" uuid="5836799a-c64e-4a9a-896a-a0abdb8d2e75"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[in H2O]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="510" y="235" width="39" height="20" uuid="3e601a4c-ec7b-4bbc-a501-bce58abe9107"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pos_tempLineaGas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="594" y="215" width="119" height="20" uuid="f461e906-0e9d-46c9-b31c-ee5b86406bc3"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="510" y="215" width="39" height="20" uuid="49d8016b-91f4-4ef9-b9ae-9de3bd42d353"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pos_presionDiferencial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="713" y="195" width="45" height="20" uuid="3c457ca3-6f62-4746-b762-de28d4d21685"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppo_thp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="713" y="215" width="45" height="20" uuid="d4a7caf2-bde9-4f7e-be09-18a407ccd54a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppo_chp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="392" y="155" width="401" height="20" backcolor="#CCCCFF" uuid="b54f97f8-a2f6-4c21-abcd-7a806386bd24"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parámetros promedio operación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="195" width="43" height="20" uuid="f090974c-483e-4ef0-86d6-de7a3fba2f51"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[psi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="195" width="118" height="20" uuid="dfb75d1b-8e56-4c66-b4db-3a67fbabb847"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Presión estática]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="551" y="195" width="43" height="20" uuid="28f3c4d3-565e-442c-a70b-b0fd39fdffb1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[psi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="235" width="118" height="20" uuid="ad5c54f8-4f9f-4177-a0c0-cc4c70f19696"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temp. linea gas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="235" width="119" height="20" uuid="bbee97fb-6258-46c2-924b-797623261eb7"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Choke]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="255" width="43" height="20" uuid="50ec4c05-c834-4bc5-8e2d-af59141d8e29"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Hz]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="195" width="119" height="20" uuid="3d9ec941-4f76-48ae-be5a-b5f7ce17baa5"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[THP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="255" width="119" height="20" uuid="87a4b7c3-e991-47d2-876d-a444b3a1db86"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Frecuencia variador:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="235" width="43" height="20" uuid="c01dab4a-5b5e-4564-b94c-8e5aca22eba5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[x/64"]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="713" y="255" width="45" height="20" uuid="db89aee9-9423-484e-90e6-aec39c66e48a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppo_frecuenciaVariador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="195" width="39" height="20" uuid="f8a98712-0ef2-4b96-a62b-a0fd3714076b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pos_presionEstatica}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="155" width="215" height="20" backcolor="#CCCCFF" uuid="b10423dd-bb3a-4dac-ac4e-597289a98dc3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fluidos recibidos durante la prueba]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="226" y="155" width="158" height="20" backcolor="#CCCCFF" uuid="29a3532e-e5f1-4ba6-a7e6-e0fd10787d29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liquidación de prueba]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="255" width="102" height="20" uuid="97ab3046-1aa8-41b6-a212-89a508dce635"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tiempo de prueba:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="103" y="255" width="68" height="20" uuid="d88fb152-3338-480e-9ac3-4b9c2db965b9"/>
+				<textFieldExpression><![CDATA[$P{fr_tiempoPrueba}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="225" y="255" width="79" height="20" uuid="8d1bfc58-8bad-4742-b70f-3db14e4d8778"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Caudal de gas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="255" width="43" height="20" uuid="ae636ae1-e875-435b-9e3a-755c1b77e50d"/>
+				<text><![CDATA[Horas]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="304" y="255" width="37" height="20" uuid="04f672bc-79b0-4cb0-b9db-78dce7bfad3e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{lp_caudalGas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="341" y="255" width="43" height="20" uuid="5d321de2-1c7e-4b1a-bf92-eecd2ba49d78"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[SCFD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="275" width="43" height="20" uuid="0b5be25e-e86b-4179-b002-5235dfee7ab9"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[psi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="295" width="119" height="20" uuid="6d27834c-1b4c-4c5f-b2bc-8d6570944cc7"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Voltajer Variador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="255" width="118" height="20" uuid="d0e5a916-5ea1-430a-8094-6c5d333743fa"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Platina de orificio]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="510" y="255" width="39" height="20" uuid="23b5c1e2-9ab2-49fc-848e-458c9c0bbc86"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pos_platinaOrificio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="713" y="275" width="45" height="20" uuid="56300378-559c-4ab7-b2e8-53b76a6382cc"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppo_pip}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="551" y="255" width="43" height="20" uuid="d263b5bf-b83e-4ea0-8b1e-1db344957e45"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[in]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="295" width="43" height="20" uuid="88f15e11-02a7-4d58-a4fc-aab21135c486"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Volt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="275" width="118" height="20" uuid="64012acf-4b4c-49b5-8a5b-e15ed3490a22"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID línea de gas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="275" width="119" height="20" uuid="1d6e0154-1745-46dd-97db-01677166ac48"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="510" y="275" width="39" height="20" uuid="ae521cf1-1158-469f-a97e-8fe4541fc9ff"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pos_idLineaGas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="713" y="295" width="45" height="20" uuid="89b4b560-ed97-4ba2-a8e5-1cd46d501c3e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppo_voltajeVariador}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="275" y="298" width="42" height="20" uuid="ea7d2875-1d62-4148-92da-3494a49e44fe"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cloruros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="298" width="151" height="40" uuid="89adce9b-87d2-431f-91a7-c3a4e652c766"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Muestra en cabeza de pozo
+durante la prueba]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="295" width="118" height="20" uuid="66bdb2b0-5983-466d-8887-30cd25e4b586"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grav. Escpecífica Gas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="335" width="43" height="20" uuid="aa70a176-1c49-4863-8078-fc80cf1cb0ba"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[BPD]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="298" width="45" height="20" uuid="589eafd4-25db-4b00-92f4-a4db975863bd"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mcp_clorduros}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="157" y="298" width="62" height="20" uuid="a00ffdd8-b765-427b-80a2-5a397c5d9a51"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[API@60°F]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="315" width="43" height="20" uuid="777c36e6-cede-497d-8428-df0cd8d4a403"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Amp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="315" width="118" height="20" uuid="5005ce3f-1b1a-4f4f-825c-56be666cc89d"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOR]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="510" y="295" width="39" height="20" uuid="1bae3b56-54f1-49c7-a47e-cfd15f175f49"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pos_gravEspecificaGas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="315" width="39" height="20" uuid="474828ce-9c62-4440-86a8-7ed14c191c6a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pos_gor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="318" width="46" height="20" uuid="ada47140-b876-453a-a499-31fed1d8cbfb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mcp_bsw}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="298" width="27" height="20" uuid="168abe33-4d94-43d5-bc11-ddf6ade50d1d"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ppm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="355" width="119" height="20" uuid="d137ab3f-fe53-4095-8ae4-95bd7e890dff"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Configuración Bomba Jet]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="713" y="315" width="45" height="20" uuid="8475ddc8-6b52-4ce3-8fc6-5563742fe281"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppo_corrienteMotor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="551" y="298" width="43" height="20" uuid="65300b49-6023-41fe-95b4-6bd5a9f5daa9"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[SCF/STB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="318" width="42" height="20" uuid="3501c803-43ba-444a-b049-017b24dfa919"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[pH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="318" width="10" height="20" uuid="785a072c-4f2f-4c02-85ab-bf42f815be27"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="315" width="119" height="20" uuid="957c965f-5754-4a28-8761-930531d0d619"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Corriente motor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="335" width="119" height="20" uuid="bc9101f6-e827-4100-8b92-0c210077a8fc"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Caudal de Inyección]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="219" y="338" width="45" height="20" uuid="85d47cb8-cc02-4ba2-839e-15c60a4e397b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mcp_sedimentos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="157" y="338" width="62" height="20" uuid="7d0a9a88-ea18-4d85-996a-0fe60db8be62"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sedimentos]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="219" y="298" width="56" height="20" uuid="778d3122-add1-4353-9c81-3600d5fa2092"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mcp_apiArb60}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="157" y="318" width="62" height="20" uuid="c25090be-cbb2-4f04-904a-1293e807c09d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BSW]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="317" y="318" width="45" height="20" uuid="281650e1-e641-4562-9b3b-b56dc656df88"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mco_ph}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="265" y="338" width="10" height="20" uuid="604bf51e-bf83-497f-b7c4-6aa1d3665b83"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="393" width="278" height="20" uuid="fb7ad91c-9ea9-4758-a4c0-dd6cb3c21ac7"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Operador responsable de toma de datos cierre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="373" width="278" height="20" uuid="4a76fa64-e194-429d-b30e-dfd94410a0ef"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Operador responsable de toma de datos apertura:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="478" y="393" width="141" height="20" uuid="a33ef0b2-ee5d-4170-968d-7bc10526ee60"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supervisor Vetra E&P Col.]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table 15" style="table 15" x="-1" y="0" width="802" height="50" uuid="35d22259-b2fb-4074-ab30-7bf16ba493d1"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="pruebasPozoDataSet" uuid="408f02f8-1d7d-421c-9ed4-a74cae024c4d">
+						<dataSourceExpression><![CDATA[$P{medidasPruebaPozoDataSource}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="38" uuid="7d24f8da-ebb6-4f27-b93d-6c8c2f3dc9c7">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="32" height="32" uuid="45b9c0e4-2187-445b-a772-eed7879f4d2c"/>
+								<text><![CDATA[tnk]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="32" height="30" uuid="2cd74ed2-e01f-4c78-961a-45567c61dfa2"/>
+								<textFieldExpression><![CDATA[$F{tnk}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="85" uuid="8c45f320-efb8-4f39-9c36-94e747e35550">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="65" height="32" uuid="b1a94a39-74c6-4697-ac69-d44966c0b118"/>
+								<text><![CDATA[fechaMedida]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="65" height="30" uuid="f6852441-7dd9-43a6-ae45-35d48783057d"/>
+								<textFieldExpression><![CDATA[$F{fechaMedida}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="31" uuid="9f5905c1-cf5f-4f4a-a3b9-809db9955f03">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="31" height="32" uuid="257c5f99-79c8-49cf-8da2-f79b0b2d6c61"/>
+								<text><![CDATA[ind]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="31" height="30" uuid="e2d85adb-b799-47ea-bb18-afd3d3ff6eb6"/>
+								<textFieldExpression><![CDATA[$F{ind}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="31" uuid="58045097-4baa-4d3f-a458-2d821787f9c5">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="30" height="40" uuid="8a348021-b2e3-44da-8819-8b5e9054428f"/>
+								<text><![CDATA[fluid
+Level
+mm]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="30" uuid="0ef83b67-b90b-4f81-81c9-0b67f18f93f9"/>
+								<textFieldExpression><![CDATA[$F{fluidLevel_mm}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="30" uuid="27e025b7-7d5e-44ce-9011-92a47ff31888">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="30" height="40" uuid="c8eeef03-65ac-41bc-99a8-91137852b321"/>
+								<text><![CDATA[Fluid
+Level
+bbls]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="30" uuid="846e9ab7-c389-4102-8787-255c19472ca0"/>
+								<textFieldExpression><![CDATA[$F{fluidLevel_bbls}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="33" uuid="2e44edd5-406c-4016-b540-e08416614c5c">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="32" height="40" uuid="93fb68e8-9890-47c8-beca-c85058625b47"/>
+								<text><![CDATA[Water
+Free
+mm]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="33" height="20" uuid="5f11891d-51f7-42e3-8ae9-4382a357cf05"/>
+								<textFieldExpression><![CDATA[$F{waterFree_mm}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="32" uuid="f1e7ad2c-08ff-4da6-954c-2bd7f65bc41c">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="32" height="40" uuid="a2be166d-40a4-43b6-84fd-c33a7cd43992"/>
+								<text><![CDATA[Water
+Free
+bbls]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="32" height="20" uuid="5674fc05-60f6-4e24-939c-aa59791961e9"/>
+								<textFieldExpression><![CDATA[$F{waterFree_bbls}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="31" uuid="869cef03-aed4-416b-b0b5-02b7d5a59443">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="31" height="40" uuid="5577fc35-b798-4145-8e84-0e6e1f6026d9"/>
+								<text><![CDATA[Temp
+Shell
+°F]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="31" height="20" uuid="85fa188d-6bc9-449a-bf5a-ffcdd84e16a4"/>
+								<textFieldExpression><![CDATA[$F{tempShell_f}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="a932f9f4-de65-4940-8c07-3cc16dff359c">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="43" height="30" uuid="bdd30816-92a2-473d-a41e-399ea4f227cc"/>
+								<text><![CDATA[CTSh]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="43" height="20" uuid="623035a4-92af-4ff8-ac16-a9434d27db40"/>
+								<textFieldExpression><![CDATA[$F{CTSh}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="68" uuid="30034f33-3003-4f89-a99c-84fa1ba6056b">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="31" height="40" uuid="7542de04-59d9-4c6f-8ceb-a1c33c908d4d"/>
+								<text><![CDATA[Gross
+Oil
+bbls]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="47" height="20" uuid="cdf3ffce-d8bf-4256-bf1b-e8a0e2bb61c9"/>
+								<textFieldExpression><![CDATA[$F{gossOil_bbls}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="24" uuid="6557cab7-7d08-4534-b5be-90019ce3efd5">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="24" height="30" uuid="313f9745-496c-4cbe-a17b-31db4f76ac23"/>
+								<text><![CDATA[API
+Obs]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="24" height="20" uuid="b8187b9d-6b0f-49ac-a611-8b761713bba8"/>
+								<textFieldExpression><![CDATA[$F{apiObs}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="29" uuid="ca92a2c7-181b-463c-ab07-2d1c0fb4f2fc">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="29" height="40" uuid="2fde62db-d186-41e5-b143-21649d5a350c"/>
+								<text><![CDATA[Temp
+Obs
+°F]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="29" height="20" uuid="a0482922-957e-4fe1-ac52-237717b9a9cd"/>
+								<textFieldExpression><![CDATA[$F{tempObs_f}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="24" uuid="8cbc6045-7c3b-4ee3-b5f8-bee7254e4157">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="24" height="30" uuid="dd424086-2ce3-47c0-8f61-b2caf682fb34"/>
+								<text><![CDATA[API
+@60]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="24" height="20" uuid="9a1bae9b-4ea2-4cb3-93bf-0b4eb65c35f3"/>
+								<textFieldExpression><![CDATA[$F{apiArb60}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="29" uuid="169aaa8c-f8e8-4e93-80c2-047000625f3f">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="29" height="32" uuid="45c8d881-ff5b-4c0c-bc3c-4e9391a6dfa9"/>
+								<text><![CDATA[Temp
+Tk °F]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="29" height="20" uuid="17a89ddb-88f6-47d2-baef-5ade86c1d1d5"/>
+								<textFieldExpression><![CDATA[$F{tempTk_f}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="31" uuid="1b83508e-4488-4a2b-a794-91e11c2d8ff6">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="30" height="40" uuid="2ffb0845-1ffd-4e4a-bca8-bd6d3d6e810d"/>
+								<text><![CDATA[Temp
+Amb
+°F]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="20" uuid="ad3443bd-fec0-47f8-b471-01f98e3bc84a"/>
+								<textFieldExpression><![CDATA[$F{tempAmb_f}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="28" uuid="5c664074-0e22-4f64-a2a1-e3d7a098c400">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="28" height="30" uuid="5b83d403-fda9-4d04-9960-db9d99d6c36f"/>
+								<text><![CDATA[VCF]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="28" height="20" uuid="ba19391f-6945-4c56-9a06-5b2da9a11d2f"/>
+								<textFieldExpression><![CDATA[$F{vcf}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="69" uuid="c3e3d64a-0bab-45af-9ce5-4d8b5c132066">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="64" height="30" uuid="1c15d3ee-68c4-403e-8037-0bed202c8b5b"/>
+								<text><![CDATA[Std. Vol bbls]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="64" height="20" uuid="a22536e1-ade4-4aef-af89-2c5bb8cf483b"/>
+								<textFieldExpression><![CDATA[$F{stdVol_bbls}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="32" uuid="1b439b99-060f-46c8-8410-299c00b857ac">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="29" height="30" uuid="d8aa11ac-3a9e-40e3-874c-088807ad1f09"/>
+								<text><![CDATA[S&W
+%]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="29" height="20" uuid="8da64abe-b29c-44c7-beb5-cb8bb44c942c"/>
+								<textFieldExpression><![CDATA[$F{sw_percentage}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="56" uuid="5184167c-e309-4e82-94e4-55c0ef6ad600">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="33" height="30" uuid="d61301d4-bbe2-492e-a07a-07d232eda672"/>
+								<text><![CDATA[Factor
+BS&W]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="56" height="20" uuid="fde492c0-8834-4ccb-ae23-cbca1d372d95"/>
+								<textFieldExpression><![CDATA[$F{factorBSW}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="44" uuid="69355c47-80c3-434e-86e8-bcca38cf0681">
+						<jr:columnHeader style="table 15_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="44" height="40" uuid="0e754673-815e-48de-9bae-7ffc11d89d4d"/>
+								<text><![CDATA[Net Oil
+bbls]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 15_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="44" height="20" uuid="414efd41-1c39-40ac-b3af-ea0cf0c6f781"/>
+								<textFieldExpression><![CDATA[$F{netOil_bbls}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>
