@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" 
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="idmPU" transaction-type="JTA">
+		<jta-data-source>java:/mysql/idmDS</jta-data-source>
+		<class>co.runcode.dm.idm.AbstractCredentialTypeEntity</class>
+		<class>co.runcode.dm.idm.AccountTypeEntity</class>
+		<class>co.runcode.dm.idm.AttributedTypeEntity</class>
+		<class>co.runcode.dm.idm.AttributeTypeEntity</class>
+		<class>co.runcode.dm.idm.DigestCredentialTypeEntity</class>
+		<class>co.runcode.dm.idm.GroupTypeEntity</class>
+		<class>co.runcode.dm.idm.IdentityTypeEntity</class>
+		<class>co.runcode.dm.idm.OTPCredentialTypeEntity</class>
+		<class>co.runcode.dm.idm.PartitionTypeEntity</class>
+		<class>co.runcode.dm.idm.PasswordCredentialTypeEntity</class>
+		<class>co.runcode.dm.idm.PermissionTypeEntity</class>
+		<class>co.runcode.dm.idm.RelationshipIdentityTypeEntity</class>
+		<class>co.runcode.dm.idm.RelationshipTypeEntity</class>
+		<class>co.runcode.dm.idm.RoleTypeEntity</class>
+		<class>co.runcode.dm.idm.TokenCredentialTypeEntity</class>
+		<class>co.runcode.dm.idm.X509CredentialTypeEntity</class>
+<!-- 		<exclude-unlisted-classes>true</exclude-unlisted-classes> -->
+
+		<properties>
+			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
+<!-- 			<property name="javax.persistence.sql-load-script-source" value="META-INF/sql/scriptsDB.sql" /> -->
+		</properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,3 @@
+INSERT INTO `permission` (`action`,`resource`,`urlResource`,`parent_permission`) VALUES ('read','Home','/app/content/home.xhtml',NULL);
+INSERT INTO `permission` (`action`,`resource`,`urlResource`,`parent_permission`) VALUES ('read','Persons','/app/content/person.xhtml',NULL);
+INSERT INTO `permission` (`action`,`resource`,`urlResource`,`parent_permission`) VALUES ('reed','Permissions','/app/content/permission.xhtml',NULL);
