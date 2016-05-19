@@ -11,8 +11,8 @@
            Person Managment
        </f:facet>
        
-       <p:ajax event="rowEdit" listener="#{personBean.onRowEdit}" update=":form:msgs" />
-       <p:ajax event="rowEditCancel" listener="#{personBean.onRowCancel}" update=":form:msgs" />
+       <p:ajax event="rowEdit" listener="#{personBean.onRowEdit}" update="growl" />
+       <p:ajax event="rowEditCancel" listener="#{personBean.onRowCancel}" update="growl" />
 
 		<p:column headerText="Id">
 			<p:cellEditor>

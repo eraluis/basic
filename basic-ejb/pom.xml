@@ -45,6 +45,11 @@
 			<artifactId>picketlink</artifactId>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+		  <groupId>org.picketlink</groupId>
+		  <artifactId>picketlink-idm-simple-schema</artifactId>
+		  <scope>compile</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>javax</groupId>

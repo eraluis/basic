@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 import org.picketlink.idm.IdentityManager;
+import org.picketlink.idm.RelationshipManager;
 import org.picketlink.idm.credential.Password;
 import org.picketlink.idm.model.basic.BasicModel;
 import org.picketlink.idm.model.basic.User;
@@ -20,6 +21,9 @@ public class UserBOImpl implements UserLBO {
 	
 	@Inject
 	private IdentityManager identityManager;
+	
+	@Inject 
+	private RelationshipManager rm;
 	
 	@Inject
 	private PersonLBO personLBO;

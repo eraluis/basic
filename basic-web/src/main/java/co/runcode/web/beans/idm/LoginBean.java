@@ -1,4 +1,4 @@
-package co.runcode.web.beans;
+package co.runcode.web.beans.idm;
 
 import java.io.IOException;
 import java.net.URI;

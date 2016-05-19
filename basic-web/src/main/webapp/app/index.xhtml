@@ -7,22 +7,30 @@
 	xmlns:p="http://primefaces.org/ui">
 	
 	<ui:define name="navbar">
+		<h:form >
 		<h3>Menu:</h3>
-		<ul>
-			<li> <p:commandLink action="#{testBean.setHome}" value="Home" update="@form" /> </li>
-			<li> <p:commandLink action="#{testBean.setPerson}" value="Persons" update="@form" /> </li>
-			<li> <p:commandLink action="#{testBean.setMenu3}" value="Menu 3" update="@form" /> </li>			
-		</ul>
+			<ul>			
+				<ui:repeat var="permission" value="#{permissionBean.permissionList}" varStatus="status">						
+					<li> <p:commandLink action="#{permissionBean.select(permission)}" value="#{permission.resource}" update="@all" /> </li>
+				</ui:repeat>			
+			</ul>
+		</h:form>
 	</ui:define>
 	
 	<ui:define name="content">
-		<h:panelGroup style="float: right;">
-			<p:commandLink value=" #{identity.account.firstName} #{identity.account.lastName}"/>
-			<h:outputText value=" | "/>
-			<p:commandLink action="#{identity.logout}" value="Sing out"/>
-		</h:panelGroup>	
-		<div class="clear" />			
-		<ui:include src="/app/content/#{testBean.selectedMenu}.xhtml" />
+		
+			<div id="test" >
+				<h:form >
+					<h:panelGroup style="float: right;">
+						<p:commandLink value=" #{identity.account.firstName} #{identity.account.lastName}"/>
+						<h:outputText value=" | "/>
+						<p:commandLink action="#{identity.logout}" value="Sing out"/>
+					</h:panelGroup>
+				</h:form>
+				<div class="clear" />			
+				<ui:include src="#{permissionBean.selected.urlResource}" />
+			</div>
+		
 	</ui:define>
 			
 </ui:composition>

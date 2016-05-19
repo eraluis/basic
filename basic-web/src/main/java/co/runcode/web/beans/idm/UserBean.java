@@ -1,4 +1,4 @@
-package co.runcode.web.beans;
+package co.runcode.web.beans.idm;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;

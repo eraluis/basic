@@ -21,20 +21,18 @@
 			<h1 >RunCode</h1>
 		</div>      
 	</div>
-	<div id="full_content">
-		<h:form id="form">
-			<p:growl id="msgs" widgetVar="messagesVar" showDetail="true" life="5000" autoUpdate="true" />
-			<div class="navbar">
-		      <ui:insert name="navbar">
-			    	navbar
-			  </ui:insert>
-			</div>
-			<div class="content">
-		      <ui:insert name="content">
-			    	content
-			  </ui:insert>
-			</div>
-		</h:form>
+	<div id="full_content">		
+		<p:growl id="growl" widgetVar="messagesVar" showDetail="true" life="5000" autoUpdate="true" />
+		<div class="navbar">
+	      <ui:insert name="navbar">
+		    	navbar
+		  </ui:insert>
+		</div>
+		<div class="content">
+	      <ui:insert name="content">
+		    	content
+		  </ui:insert>
+		</div>
 		<div class="text_line" />
 	</div>	
 	

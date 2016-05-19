@@ -1,4 +1,4 @@
-package co.runcode.web.beans;
+package co.runcode.web.beans.person;
 
 import java.util.List;
 

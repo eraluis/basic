@@ -1,5 +1,7 @@
 package co.runcode.boimpl.person;
 
+import java.util.List;
+
 import javax.ejb.Local;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -24,14 +26,16 @@ public class PersonBOImpl extends CrudBOImpl<Person> implements PersonLBO {
 
 	@Override
 	public int calcularEdadPersona(Long idPersona) {
-//		Person person = this.find(idPersona);
-		///
 		return 0;
 	}
 
 	@Override
 	public int calcularEdadPersona(String firstName, String lastName) {
-
 		return 0;
+	}
+
+	@Override
+	public List<Person> listPersons() {		
+		return this.findAll();
 	}
 }
