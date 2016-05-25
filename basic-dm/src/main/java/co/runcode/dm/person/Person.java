@@ -17,6 +17,8 @@ public class Person {
 	private Long id;	
 	private String firstName;	
 	private String lastName;
+	private String email;
+	private Integer age;
 	
 	@OneToMany(mappedBy = "person", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Address> addressList;	
@@ -47,6 +49,22 @@ public class Person {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	public List<Address> getAddressList() {

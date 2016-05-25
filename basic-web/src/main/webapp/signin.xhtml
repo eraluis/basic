@@ -10,19 +10,19 @@
 		<ui:fragment rendered="#{not identity.loggedIn}">
 		<h:form>
 			<div style="margin-top: 30px" />
-			<p:panel header="Sign in" style="width: 25%; margin-left: auto; margin-right: auto;" > 
-		        <h:panelGrid columns="2" cellpadding="4" style="width: 100%;">
-		            <h:outputLabel value="User" />
-		            <h:inputText value="#{loginCredentials.userId}" required="true"/>
-		            <h:outputLabel value="Password" />
-		            <h:inputSecret value="#{loginCredentials.password}" required="true"/>
-		            <h:outputLabel value="" />
+			<p:panel header="Sign in" style="width: 21%; margin-left: auto; margin-right: auto;" > 
+		        <h:panelGrid columns="1" cellpadding="4" style="width: 100%;">		            
+		            <p:inputText id="user" value="#{loginCredentials.userId}" required="true" >
+		            	<p:watermark for="user" value="User" />
+		            </p:inputText>		            	           
+		            <p:password id="pwd" value="#{loginCredentials.password}" required="true" >
+		            	<p:watermark for="pwd" value="Password" />
+		            </p:password>		            
 		            <h:panelGroup>
 		            	<p:commandButton  value="Sign in" action="#{loginBean.login}"/>
-		            	<h:outputLabel value=" "/>
+		            	<p:outputLabel value=" "/>
 		            	<p:commandLink value="Sign up" action="signup" immediate="true"  />
-		            </h:panelGroup>
-		            
+		            </h:panelGroup>		            
 		        </h:panelGrid>
 	    	</p:panel>	    		    		    		    
     	</h:form>

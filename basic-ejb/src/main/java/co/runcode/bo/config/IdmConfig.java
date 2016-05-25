@@ -3,12 +3,8 @@ package co.runcode.bo.config;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
-import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
-import org.picketlink.annotations.PicketLink;
 import org.picketlink.idm.IdentityManager;
 import org.picketlink.idm.RelationshipManager;
 import org.picketlink.idm.credential.Password;
@@ -41,7 +37,7 @@ public class IdmConfig {
 			Role adminRole = new Role("admin");
 			Group adminGroup = new Group("admin");		
 			User adminUser = new User("admin");
-			Password password = new Password("Admin123");
+			Password password = new Password("123");
 			
 			identityManager.add(adminRole);
 			identityManager.add(adminGroup);

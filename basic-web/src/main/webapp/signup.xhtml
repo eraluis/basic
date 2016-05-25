@@ -11,24 +11,28 @@
 			<h:form>
 				<div style="margin-top: 30px" />
 				<p:panel header="Sign up" id="signup"
-					style="width: 25%; margin-left: auto; margin-right: auto;">
-					<h:panelGrid columns="2" cellpadding="4" style="width: 100%;">
-						<h:outputLabel value="First Name" />
-						<h:inputText value="#{userBean.firstName}" required="true" />
-
-						<h:outputLabel value="Last Name" />
-						<h:inputText value="#{userBean.lastName}" required="true" />
-
-						<h:outputLabel value="Username" />
-						<h:inputText value="#{userBean.loginName}" required="true" />
-
-						<h:outputLabel value="Password" />
-						<h:inputSecret value="#{userBean.password}" required="true" />
-
-						<h:outputLabel value="" />					
+					style="width: 21%; margin-left: auto; margin-right: auto;">
+					<h:panelGrid columns="1" cellpadding="4" style="width: 100%;">
+						
+						<p:inputText id="firstName" value="#{userBean.firstName}" required="true" >
+							<p:watermark for="firstName" value="First name" />
+			            </p:inputText>	
+						
+						<p:inputText id="lastName" value="#{userBean.lastName}" required="true" >
+							<p:watermark for="lastName" value="Last name" />
+			            </p:inputText>	
+						
+						<p:inputText id="userName" value="#{userBean.loginName}" required="true" >
+							<p:watermark for="userName" value="User name" />
+			            </p:inputText>	
+						
+						<p:password id="pwd" value="#{userBean.password}" required="true" feedback= "true" inline="true" >
+							<p:watermark for="pwd" value="Password" />
+			            </p:password>						
+										
 						<h:panelGroup>
 			            	<p:commandButton  value="Sign up" action="#{userBean.register}"/>
-			            	<h:outputLabel value=" "/>
+			            	<p:outputLabel value=" "/>
 			            	<p:commandLink value="Sign in" action="signin" immediate="true"  />
 			            </h:panelGroup>
 					</h:panelGrid>

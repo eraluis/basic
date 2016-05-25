@@ -1,12 +1,12 @@
 package co.runcode.boimpl.location;
 
-import javax.ejb.Local;
+import javax.ejb.Stateless;
 
 import co.runcode.bo.location.CountryLBO;
 import co.runcode.boimpl.CrudBOImpl;
 import co.runcode.dm.location.Country;
 
-@Local
+@Stateless
 public class CountryLBOImpl extends CrudBOImpl<Country> implements CountryLBO {
 
     public CountryLBOImpl() {

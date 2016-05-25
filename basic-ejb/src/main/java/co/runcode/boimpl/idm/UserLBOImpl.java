@@ -3,10 +3,11 @@ package co.runcode.boimpl.idm;
 import java.util.Date;
 
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
 
 import org.picketlink.idm.IdentityManager;
-import org.picketlink.idm.RelationshipManager;
 import org.picketlink.idm.credential.Password;
 import org.picketlink.idm.model.basic.BasicModel;
 import org.picketlink.idm.model.basic.User;
@@ -17,18 +18,15 @@ import co.runcode.commons.util.DateUtil;
 import co.runcode.dm.person.Person;
 
 @Stateless
-public class UserBOImpl implements UserLBO {
+public class UserLBOImpl implements UserLBO {
 	
 	@Inject
 	private IdentityManager identityManager;
 	
-	@Inject 
-	private RelationshipManager rm;
-	
 	@Inject
 	private PersonLBO personLBO;
 		
-	public UserBOImpl(){
+	public UserLBOImpl(){
 		
 	}
 	
@@ -39,6 +37,7 @@ public class UserBOImpl implements UserLBO {
 	}
 
 	@Override
+	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
 	public boolean regiterUser(Person person, String userStrg, String pwdStrg) {
 		
 		User user = BasicModel.getUser(this.identityManager, userStrg);
@@ -67,16 +66,8 @@ public class UserBOImpl implements UserLBO {
 			person.setFirstName(firstName);
 			person.setLastName(lastName);
 			personLBO.add(person);		
-			
-			user = new User(userStrg);
-			user.setFirstName(firstName);
-			user.setLastName(lastName);
-			Password password = new Password(pwdStrg);
-			
-			this.identityManager.add(user);
-			this.identityManager.updateCredential(user, password);
-			
-			return true;
+										
+			return regiterUser(person, userStrg, pwdStrg);
 
 		}else {
 			return false;

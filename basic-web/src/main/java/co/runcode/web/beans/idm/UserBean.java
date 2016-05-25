@@ -20,8 +20,7 @@ public class UserBean {
 	@Inject
 	UserLBO userLBO;
 	
-	public String register() {
-		
+	public String register() {		
 		boolean registered = userLBO.regiterUser(firstName, lastName, loginName, password);
 				
 		if(registered){			
@@ -32,10 +31,9 @@ public class UserBean {
 			FacesContext.getCurrentInstance().addMessage("signup", 
 					new FacesMessage(FacesMessage.SEVERITY_WARN, "Warning",  "Username already exists") );
 	        return "signup.jsf";
-		}
-					
+		}					
 	}
-
+	
 	public String getLoginName() {
 		return loginName;
 	}

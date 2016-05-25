@@ -1,15 +1,15 @@
 package co.runcode.boimpl;
 
-import co.runcode.bo.CrudBO;
-
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import co.runcode.bo.CrudBO;
+
 public abstract class CrudBOImpl<T> implements CrudBO<T> {
 
     @PersistenceContext(unitName = "dataModelPU")
-    private EntityManager em;
+    protected EntityManager em;
     
     private Class<T> entityClass;
     

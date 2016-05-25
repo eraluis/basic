@@ -6,40 +6,162 @@
 	xmlns:p="http://primefaces.org/ui">
 	
 	<h2>Persons</h2>
-	<p:dataTable id="persons1" var="person" value="#{personBean.personList}" editable="true" style="margin-bottom:20px">
-		<f:facet name="header">
-           Person Managment
-       </f:facet>
-       
-       <p:ajax event="rowEdit" listener="#{personBean.onRowEdit}" update="growl" />
-       <p:ajax event="rowEditCancel" listener="#{personBean.onRowCancel}" update="growl" />
-
-		<p:column headerText="Id">
-			<p:cellEditor>
-				<f:facet name="output"><h:outputText value="#{person.id}" /></f:facet>
-				<f:facet name="input"><p:inputText id="modelInput" value="#{person.id}" style="width:100%" /></f:facet>
-			</p:cellEditor>
-		</p:column>
-
-		<p:column headerText="First name">
-			<p:cellEditor>
-				<f:facet name="output"><h:outputText value="#{person.firstName}" /></f:facet>
-				<f:facet name="input"><p:inputText value="#{person.firstName}" style="width:100%" label="First name" /></f:facet>
-			</p:cellEditor>
-		</p:column>
+	<h3>Add person</h3>
+	<h:form>
+		<h:panelGrid columns="5" cellpadding="4" style="margin-bottom:20px">
+		<p:inputText id="firstName" value="#{personBean.newPerson.firstName}" required="true" >
+			<p:watermark for="firstName" value="First name" />
+		</p:inputText>
+		<p:inputText id="lastName" value="#{personBean.newPerson.lastName}" required="true" >
+			<p:watermark for="lastName" value="Last name" />
+		</p:inputText>
+		<p:inputText id="age" value="#{personBean.newPerson.age}" >
+			<p:watermark for="age" value="Age" />
+		</p:inputText>
+		<p:inputText id="email" value="#{personBean.newPerson.email}" >
+			<p:watermark for="email" value="Email" />
+		</p:inputText>
+		<p:commandButton value="Add" action="#{personBean.addPerson}" update="@all"/>
+		</h:panelGrid>	
+	</h:form>
+	
+	<h3>Person Managment</h3>
+	<h:form>
+		<p:dataTable id="personList" var="person" value="#{personBean.personList}" editable="true" style="margin-bottom:20px">       
+	       	
+	       	<p:ajax event="rowEdit" listener="#{personBean.onRowEdit}" update="growl" />
+	       	<p:ajax event="rowEditCancel" listener="#{personBean.onRowCancel}" update="growl" />
+	
+			<p:column headerText="Id" width="5%" >
+				<h:outputText value="#{person.id}" />
+			</p:column>
+	
+			<p:column headerText="First name" width="15%" >
+				<p:cellEditor>
+					<f:facet name="output"><h:outputText value="#{person.firstName}" /></f:facet>
+					<f:facet name="input"><p:inputText value="#{person.firstName}"  label="First name" /></f:facet>
+				</p:cellEditor>
+			</p:column>
+			
+			<p:column headerText="Last name" width="15%">
+				<p:cellEditor>
+					<f:facet name="output"><h:outputText value="#{person.lastName}" /></f:facet>
+					<f:facet name="input"><p:inputText value="#{person.lastName}" style="width:100%" label="Last name" /></f:facet>
+				</p:cellEditor>
+			</p:column>
+			
+			<p:column headerText="Age" width="5%" style="text-align:center;">
+				<p:cellEditor>
+					<f:facet name="output"><h:outputText value="#{person.age}" /></f:facet>
+					<f:facet name="input"><p:inputText value="#{person.age}" style="width:100%" label="Age" /></f:facet>
+				</p:cellEditor>
+			</p:column>
+			
+			<p:column headerText="Email" width="25%" >
+				<p:cellEditor>
+					<f:facet name="output"><h:outputText value="#{person.email}" /></f:facet>
+					<f:facet name="input"><p:inputText value="#{person.email}" style="width:100%" label="Email" /></f:facet>
+				</p:cellEditor>
+			</p:column>
+			
+			<p:column headerText="Addres" width="8%" style="text-align:center;">
+				<p:commandLink value="Edit" action="#{personBean.manageAddress(person)}" update="@all"/>
+			</p:column>
+			
+			<p:column headerText="Users" width="8%" style="text-align:center;">
+				<p:commandLink value="Edit"/>
+			</p:column>
+			
+			<p:column  width="5%" >
+	           <p:rowEditor />
+	       </p:column>
+		</p:dataTable>	
+	</h:form>
 		
-		<p:column headerText="Last name">
-			<p:cellEditor>
-				<f:facet name="output"><h:outputText value="#{person.lastName}" /></f:facet>
-				<f:facet name="input"><p:inputText value="#{person.lastName}" style="width:100%" label="Last name" /></f:facet>
-			</p:cellEditor>
-		</p:column>
+	<!-- Panel Modal: Add address  -->
+	<h:form>
+		<p:dialog modal="true" widgetVar="dlg" visible="#{personBean.addressPanel}" 
+				width="520px" height="450px" >
+			<f:facet name="header"> 
+				<p:outputLabel value="Address: #{personBean.selectedPerson.firstName} #{personBean.selectedPerson.lastName} "/>
+			</f:facet>
+			
+			<ui:fragment rendered="#{personBean.actualAddress != null}">
+				<h:panelGrid columns="3" cellpadding="4" style="width: 100%;">
+				<f:facet name="header">
+					<h3>
+						<p:outputLabel value="Actual address"/>
+					</h3>
+				</f:facet>
+				<h:outputText value="#{personBean.actualAddress.country.name}" />
+				<h:outputText value="#{personBean.actualAddress.state.name}" />
+				<h:outputText value="#{personBean.actualAddress.city.name}" />
+				<h:outputText value="#{personBean.actualAddress.street1}" />
+				<h:outputText value="#{personBean.actualAddress.street2}" />
+					
+			</h:panelGrid>
+			
+			</ui:fragment>
+			
+			
+			<h:panelGrid columns="2" cellpadding="4" style="width: 100%;">
+				<f:facet name="header">
+					<h3>
+						<p:outputLabel value="New address"/>
+					</h3>
+				</f:facet>
+				
+				<p:outputLabel value="Country" for="countryMenu"/>	
+				<p:selectOneMenu value="#{locationBean.country.id}" id="countryMenu" 
+					required="true" requiredMessage="Country is required">
+					<f:selectItem itemLabel="Select country..." itemValue=""/>
+					<f:selectItems value="#{locationBean.countries}" var="country" itemLabel="#{country.name}" itemValue="#{country.id}"/>
+					<p:ajax listener="#{locationBean.countryChangend}" update="@this, stateMenu, cityMenu" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="State" for="stateMenu"/>	
+				<p:selectOneMenu value="#{locationBean.state.id}" id="stateMenu"
+					required="true" requiredMessage="State is required">
+					<f:selectItem itemLabel="Select state" itemValue=""/>
+					<f:selectItems value="#{locationBean.states}" var="state" itemLabel="#{state.name}" itemValue="#{state.id}"/>
+					<p:ajax listener="#{locationBean.stateChangend}" update="@this, cityMenu" />
+				</p:selectOneMenu>
 		
-		<p:column style="width:32px">
-           <p:rowEditor />
-       </p:column>
-	</p:dataTable>
-	<h3>Agregar personas</h3>
-	<p>Bloa bla bla bla</p>
+				<p:outputLabel value="City" for="cityMenu" />	
+				<p:selectOneMenu value="#{locationBean.city.id}" id="cityMenu"
+					required="true" requiredMessage="City is required">
+					<f:selectItem itemLabel="Select city" itemValue=""/>
+					<f:selectItems value="#{locationBean.cities}" var="city" itemLabel="#{city.name}" itemValue="#{city.id}"/>
+					<p:ajax  update="@this" />
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="Street 1: " for="street1Input" />
+				<p:inputText value="#{personBean.newAddress.street1}" id="street1Input"
+					required="true" requiredMessage="Al least one street is required"/>
+				
+				<p:outputLabel value="Street 2: "  for="street2Input" />
+				<p:inputText value="#{personBean.newAddress.street2}" id="street2Input"/>
+				
+				<p:outputLabel value=""/>
+				<h:panelGroup>
+	            	<p:commandButton value="Add address" action="#{personBean.addAddressToPerson}" update="@all"/>
+	            	<h:outputLabel value=" "/>
+	            	<p:commandLink value="Cancel" action="#{personBean.cancelManageAddress}" update="@all" immediate="true"/>
+	            </h:panelGroup>									 				
+			</h:panelGrid>
+		</p:dialog>
+	</h:form>
+	
+	<!-- Test functions: Autocomplete  -->
+	<h3>Test functions</h3>
+	<h:form>
+		<h:panelGrid columns="2" cellpadding="4" >
+			<p:outputLabel value="Autocomplete person by first name:" for="autocompletePerson" />
+	        <p:autoComplete id="autocompletePerson" value="#{personBean.selectedPerson}" size="40"
+	        	completeMethod="#{personBean.completePerson}" converter="personConverter"
+	        	var="person" itemLabel="#{person.firstName} #{person.lastName}" itemValue="#{person}" forceSelection="true" />
+        </h:panelGrid>
+    </h:form>
+        	
 
 </ui:composition>

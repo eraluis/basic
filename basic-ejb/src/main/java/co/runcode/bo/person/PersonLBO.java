@@ -19,6 +19,6 @@ public interface PersonLBO extends CrudBO<Person> {
 	public int calcularEdadPersona(String firstName, String lastName);
 	
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)	
 	public List<Person> listPersons();
 }

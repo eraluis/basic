@@ -28,6 +28,10 @@ public class PermissionBean {
 	public void init(){
 		permissionList = permissionLBO.findAll();
 		selected = new Permission();
+		// @TODO Call BO and look for default permission 
+		selected.setAction("read");
+		selected.setResource("Home");
+		selected.setUrlResource("/app/content/home.xhtml");
 	}
 	
 	public String select(Permission permission){
